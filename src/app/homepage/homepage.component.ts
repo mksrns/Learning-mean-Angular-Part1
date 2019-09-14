@@ -15,19 +15,24 @@ export class HomepageComponent implements OnInit {
   brand: any;
   filterArray: any = [];
   sort: number;
+  page: number;
 
   constructor(private productServ: ProductService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() { 
     this.route.queryParams.pipe(filter(params => params.sort)).subscribe(params => {
       this.sort = 1;
+      this.page = 1;
       if (params.sort) {
         this.sort = params.sort;
+        this.page = params.page;
         console.log(params.sort);
+        console.log(params.page);
       }
     });
 
-    this.getPaginatedProd(this.sort, this.filterArray['category'], this.filterArray['brand']);
+    // this.getPaginatedProd(this.sort, this.filterArray['category'], this.filterArray['brand']);
+    this.getPaginatedProd(this.sort, this.page);
     this.getCategory();
     this.getBrand();
   }
@@ -40,7 +45,7 @@ export class HomepageComponent implements OnInit {
       this.filterArray[type].splice(index, 1);
     }
     // this.filterFunction();
-    this.getPaginatedProd(1, this.filterArray['category'], this.filterArray['brand']);
+    // this.getPaginatedProd(1, this.filterArray['category'], this.filterArray['brand']);
 
     console.log(this.filterArray['category']);
     console.log(this.filterArray['brand']);
@@ -50,12 +55,20 @@ export class HomepageComponent implements OnInit {
     this.filterArray['category'] = [];
     this.filterArray['brand']= [];
   }
-  getPaginatedProd(sort, x, y){
-    this.productServ.getAllProd(sort, x, y).subscribe((data:any) =>{
+  getPaginatedProd(sort, page){
+    this.productServ.getAllProd(sort, page).subscribe((data:any) =>{
       this.product = data.product;
-      this.router.navigateByUrl('/home?sort=' + sort);
+      this.router.navigateByUrl('/home?sort=' + sort + '&page=' + page);
     });
-    
+    console.log(page);
+  }
+  sorted(sort){
+    console.log(sort);
+    this.getPaginatedProd(sort, this.page);
+  }
+  pageNumber(page){
+    this.getPaginatedProd(this.sort, page);
+    console.log(this.page);
   }
   filterFunction(){
 

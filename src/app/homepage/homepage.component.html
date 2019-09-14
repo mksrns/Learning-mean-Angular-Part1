@@ -34,10 +34,10 @@
                         aria-expanded="false">Sort</button>
                 <div class="dropdown-menu pad-15" aria-labelledby="triggerId">
                     <div class="radio">
-                        <label><input type="radio" (change)="getPaginatedProd(1)" name="optradio" checked>A-Z</label>
+                        <label><input type="radio" (change)="sorted(1)" name="optradio" checked>A-Z</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" (change)="getPaginatedProd(-1)" name="optradio">Z-A</label>
+                        <label><input type="radio" (change)="sorted(-1)" name="optradio">Z-A</label>
                     </div>
                 </div>
             </div>          
@@ -56,12 +56,12 @@
         </div>
     </div> 
     <div class="row">
-        <!-- <ul class="pagination">
+        <ul class="pagination">
             <li class="page-item"><a class="page-link">Previous</a></li>
-            <li class="page-item"><a class="page-link" (click)="getPaginatedProd(asc)">1</a></li>
-            <li class="page-item"><a class="page-link" (click)="getPaginatedProd(2, asc)">2</a></li>
-            <li class="page-item"><a class="page-link" (click)="getPaginatedProd(3, asc)">3</a></li>
+            <li class="page-item"><a class="page-link" (click)="pageNumber(1)">1</a></li>
+            <li class="page-item"><a class="page-link" (click)="pageNumber(2)">2</a></li>
+            <li class="page-item"><a class="page-link" (click)="pageNumber(3)">3</a></li>
             <li class="page-item"><a class="page-link">Next</a></li>
-        </ul> -->
+        </ul>
     </div>
 </div>

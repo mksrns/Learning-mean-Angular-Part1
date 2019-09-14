@@ -11,8 +11,8 @@ export class ProductService {
 
   constructor(private _http:HttpClient) { }
 
-  getAllProd(sort, x, y):Observable<any[]>{ 
-      return this._http.get<any[]>(environment.baseUrl + 'products' + '?sort=' + sort + '&filterCategory=' + x + '&filterBrand=' + y);
+  getAllProd(sort, page):Observable<any[]>{ 
+      return this._http.get<any[]>(environment.baseUrl + 'products' + '?sort=' + sort + '&page=' + page);
   }
   getAllCategory():Observable<any[]>{ 
     return this._http.get<any[]>(environment.baseUrl + 'categories');
