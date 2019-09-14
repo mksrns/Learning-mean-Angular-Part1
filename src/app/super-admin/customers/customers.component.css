@@ -1,0 +1,52 @@
+.customer{
+    width: 200px;
+    height: 200px;
+    box-shadow: 1px 1px 6px grey;
+    background: pink;
+}
+.col-md-6, .col-sm-6{
+  max-width: 47% !important;
+}
+table {
+  width: 100%;
+} 
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+th.mat-header-cell {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+td.mat-cell{
+  text-align: center;
+}
+.edit-box{
+  color: green;
+  cursor: pointer;
+}
+.delete-box{
+  color: red;
+  cursor: pointer;
+}
+table {
+  counter-reset: serial-number;  /* Set the serial number counter to 0 */
+}
+
+table td:first-child:before {
+  counter-increment: serial-number;  /* Increment the serial number counter */
+  content: counter(serial-number);  /* Display the counter */
+}
+.table td, .table th {
+  padding: 0.75rem 2rem !important;
+}
+.table td {
+  font-size: 13px !important;
+  color: #4d4f5c !important;
+}
+.table th {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: #a3a6b4 !important;
+}

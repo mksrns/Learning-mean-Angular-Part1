@@ -1,0 +1,86 @@
+<div class="container-fluid">
+ <!-- *ngIf="!showInvoice" -->
+ 
+    <div class="form" [formGroup]="invoiceForm">
+        <h6 class="title">Customer's Information</h6>
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput formControlName="firstname" placeholder="First Name">
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput formControlName="lastname" placeholder="Last Name">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput formControlName="street" placeholder="Street">
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput formControlName="city" placeholder="City">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput formControlName="state" placeholder="State">
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput formControlName="tel1" placeholder="Phone">
+                </mat-form-field>
+            </div>
+        </div>
+        <!-- <h6 class="title">Merchants's Information</h6> -->
+        <!-- <div class="row">
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput formControlName="Mfirstname" placeholder="First Name">
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput formControlName="Mlastname" placeholder="Last Name">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput formControlName="Mstreet" placeholder="Street">
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput formControlName="Mcity" placeholder="City">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput formControlName="Mstate" placeholder="State">
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput formControlName="Mtel1" placeholder="Phone">
+                </mat-form-field>
+            </div>
+        </div> -->
+
+        <div class="row">
+            <button type="submit" (click)="onCreateFunction()" class="btn btn-success col-6">Done</button>
+            <button type="button" class="btn btn-secondary col-6" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
+<!-- <app-invoice-template *ngIf="showInvoice"></app-invoice-template> -->

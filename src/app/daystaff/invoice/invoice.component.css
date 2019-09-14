@@ -1,0 +1,8 @@
+.invoices-list, .single-invoice, .filters{
+    background: white;
+}
+.top{
+    box-shadow: 1px 1px 6px #43425d78;
+    margin-bottom: 27px;
+    padding: 10px;
+}

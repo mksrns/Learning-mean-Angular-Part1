@@ -1,0 +1,49 @@
+.mega-menu{
+    box-shadow: 1px 0 6px #e0dbdb;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.menu-items, .drp{
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+.menu-item{
+    display: inline-block;
+    padding: 10px;
+}
+.menu-item a{
+    text-decoration: none;
+    color: black;
+}
+.menu-item a.a::after{
+    content: '\293A';
+    padding-left: 7px;
+}
+.menu-item a.a:hover::after{
+    content: '\293B';
+}
+.drop:hover > .dropdown-menu{
+    display: block;
+}
+.dropdown-menu1{
+    display: none;
+}
+.drp{
+    padding: 10px;
+}
+.submenu{
+    display: none;
+    background: white;
+    box-shadow: 1px 1px 6px grey;
+}
+.drop1:hover .submenu{
+    display: block;
+    position: absolute;
+}
+.nn{
+    width: 100px;
+    height: 100px;
+    background: green;
+    border-right: 1px solid;
+}

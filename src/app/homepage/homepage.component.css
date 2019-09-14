@@ -1,0 +1,40 @@
+/* .card-text{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.item{
+    margin-bottom: 30px;
+}
+.card{
+    /* min-height: 535px !important; *
+}
+.filters{
+    padding: 10px 20px;
+    box-shadow: 0px 0px 6px 4px #f1f1f1;
+    margin-bottom: 30px;
+}
+.pad-15{
+    padding-left: 15px
+} */
+.mega-menu{
+    display: none;
+}
+.men:hover .mega-menu{
+    display: block;
+}
+.mega-menu{
+
+}
+.sub{
+
+}
+.sub-menu{
+
+}
+.sub-menu{
+    display: none;
+}
+.sub:hover .sub-menu{
+    display: block;
+}

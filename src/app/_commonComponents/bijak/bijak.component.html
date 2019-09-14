@@ -1,0 +1,144 @@
+<div class="container-fluid">
+    <div class="form" [formGroup]="bijakForm">
+        <h6 class="title"></h6>
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput formControlName="no" placeholder="No.">
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput [matDatepicker]="dp2" formControlName="dataOfReciept" placeholder="Date Of Reciept">
+                    <mat-datepicker-toggle matSuffix [for]="dp2"></mat-datepicker-toggle>
+                    <mat-datepicker #dp2 disabled="false"></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput formControlName="ms" placeholder="M/s">
+                </mat-form-field>
+            </div>
+            <div class="col-6"> 
+                <mat-form-field>
+                    <input matInput formControlName="city" placeholder="City">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput formControlName="truckNo" placeholder="Truck No.">
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput [matDatepicker]="dp3" formControlName="dispatchDate" placeholder="Dispatch Date">
+                    <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+                    <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </div>
+        <ng-container *ngIf='bijakForm.controls.itemRows!=null'>
+            <!-- <div formArrayName="itemRows" *ngFor='let itemrow of bijakForm.controls.itemRows.controls; let i=index'> -->
+                <div formArrayName="itemRows" *ngFor="let itemrow of bijakForm.get('itemRows')['controls']; let i=index">
+                <div [formGroupName]='i'>
+                <div class="row">
+                    <div class="col-md-2">
+                        <mat-form-field>
+                            <input matInput formControlName="sno" placeholder="S No.">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3">
+                        <mat-form-field>
+                            <input matInput formControlName="description" placeholder="Description">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-3">
+                        <mat-form-field>
+                            <input matInput formControlName="ctnKg" placeholder="Ctn/Kg">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-2">
+                        <mat-form-field>
+                            <input matInput formControlName="rate" placeholder="Rate">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-1">
+                        <button type="button" class="btn btn-danger" (click)="deleteRow(i)">X</button>
+                    </div>
+                    <div class="1">
+                        <button type="button" class="btn btn-primary" (click)="addNewRow()">+</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+        </ng-container>
+
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput formControlName="truckFreight" placeholder="Truck Freight">
+                </mat-form-field>
+            </div>
+            <div class="col-6"> 
+                <mat-form-field>
+                    <input matInput formControlName="railFreight" placeholder="Rail Freight">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput formControlName="stationMandiExp" placeholder="Station Mandi Exp">
+                </mat-form-field>
+            </div>
+            <div class="col-6"> 
+                <mat-form-field>
+                    <input matInput formControlName="unloading" placeholder="Unloading">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field>
+                    <input matInput formControlName="postage" placeholder="Postage">
+                </mat-form-field>
+            </div>
+            <div class="col-6"> 
+                <mat-form-field>
+                    <input matInput formControlName="phone" placeholder="Phone">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <mat-form-field>
+                    <input matInput formControlName="coldStorage" placeholder="Cold Storage">
+                </mat-form-field>
+            </div>
+            <div class="col-4"> 
+                <mat-form-field>
+                    <input matInput formControlName="loading" placeholder="Loading">
+                </mat-form-field>
+            </div>
+            <div class="col-4">
+                <mat-form-field>
+                    <input matInput formControlName="charity" placeholder="Charity">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <button type="submit" (click)="onCreateFunction()" class="btn btn-success col-6">Done</button>
+            <button type="button" class="btn btn-secondary col-6" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
+
+
+
+   
+

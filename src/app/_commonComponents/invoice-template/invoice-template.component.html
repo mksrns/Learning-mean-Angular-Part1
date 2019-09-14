@@ -1,0 +1,74 @@
+<div class="container-fluid" id="print-section">
+    <div class="row">
+        <div class="col-6 company-address">
+            <div class="">
+                <p class="logo-text">JFC</p>
+                <p class="slogan text-capitalize">Bazar samiti, ahiyapur Mfp <br>
+                    <i class="fa fa-phone" aria-hidden="true"></i> 9523510886/7488385019
+                </p>
+            </div>
+        </div>
+        <div class="col-6 invoice-print right">
+            <div class="">
+                <p class="logo-text">Invoice</p>
+                <button type="submit" printSectionId="print-section" ngxPrint printTitle="Invoice" 
+                [useExistingCss]="true" styleSheetFile="assets/css/typography.css," class="btn sign-active">Print</button>
+            </div>
+        </div>
+    </div>
+    <hr class="break">
+    <div class="row">
+        <div class="col-6 customer-address">
+            <div class="">
+                <p class="logo-text order-bold">Invoice to</p>
+                <p class="slogan text-capitalize">{{invoiceData?.firstname}} {{invoiceData?.lastname}} <br> Amgola Orient club <br> Mfp, Bihar, 842002 <br>
+                    <i class="fa fa-phone" aria-hidden="true"></i> 9523510886/7488385019
+                </p>
+            </div>
+        </div>
+        <div class="col-6 order-metadata right">
+            <div class="">
+                <p class="logo-text order-bold">Order Date: <span class="order-light">25/05/2019</span> <br>
+               Order Status: <span class="order-light order-status" [innerHtml]="orderStatus"></span><br>
+               Order Id: <span class="order-light">#112356</span></p>
+                
+            </div>
+        </div>
+    </div>
+    <div class="order-summary">
+        <table class="table table-responsive">
+            <thead class="thead-light">
+                <tr>
+                    <th>#</th><th>ITEM</th><th>DESCRRIPTION</th><th>QUANTITY</th><th>PRICE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Apple</td>
+                    <td>150/10B</td>
+                    <td>10</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Anar</td>
+                    <td>110/15B</td>
+                    <td>20</td>
+                    <td>70</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row pay">
+        <div class="payment col-12 right">
+            <p class="logo-text order-bold">Subtotal: <span class="order-light">2500</span> <br>
+               Discount: <span class="order-light">10%</span><br>
+               Vat: <span class="order-light">5%</span>
+            </p>
+            <div class="total">
+                <p class="logo-text">Rs. 2900</p>
+            </div>
+        </div>
+    </div>
+</div>

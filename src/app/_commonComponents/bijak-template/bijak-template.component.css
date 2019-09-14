@@ -1,0 +1,24 @@
+/* table, td, th{
+    border: 1px solid black;
+} */
+.bijak_table{
+    border: 3px solid black;
+}
+.bottom_border{
+    border-bottom: 1px solid black;
+}
+.pad{
+    padding: 2px;
+    border-right: 1px solid black;
+}
+.row .pad:last-child{
+    border: none;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .bijak_image{
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+} 

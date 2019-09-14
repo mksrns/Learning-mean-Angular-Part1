@@ -1,0 +1,49 @@
+<div class="container">
+    <form [formGroup]="addProductForm" class="">
+        <div class="row">
+          <div class="col-md-6">
+              <mat-form-field>
+                  <input matInput formControlName="name" placeholder="Name">
+                </mat-form-field>
+          </div>
+          <div class="col-md-6">
+              <mat-form-field>
+                  <input matInput formControlName="sku" placeholder="sku">
+                </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field>
+                    <input matInput formControlName="description" placeholder="Description">
+                </mat-form-field>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <select formControlName="categoryId" class="form-control" id="sel1">
+                        <option value="">Select Category</option>
+                        <option *ngFor="let cat of category" value="{{cat.id}}">{{cat.name}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <select formControlName="brandId" class="form-control" id="sel1">
+                            <option value="">Select Brand</option>
+                        <option *ngFor="let brad of brand" value="{{brad.id}}">{{brad.name}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button type="submit" (click)="onAddProduct()" class="btn btn-success">Add</button>
+      </form>
+</div>
+
+<!-- <mat-form-field>
+    <input autocomplete="off" type="text" [formControl]="myControl" matInput formControlName="state" placeholder="State" [matAutocomplete]="auto">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+    </mat-option>
+    </mat-autocomplete>
+</mat-form-field> -->

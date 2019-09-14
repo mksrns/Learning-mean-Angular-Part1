@@ -1,0 +1,375 @@
+<!-- Template -->
+<!-- <table class="table-responsive">
+    <tr>
+        <td colspan="7"><img src="assets/images/jagdamba.jpg" alt=""/></td>
+    </tr>
+    <tr>
+        <td colspan="2">No.&nbsp;&nbsp;{{bijaks?.no}}</td>
+        <td colspan="5">Date of Receipt:&nbsp;&nbsp;{{bijaks?.dateOfReciept}}</td>
+    </tr>
+    <tr>
+        <td colspan="7">M/s:&nbsp;&nbsp;<b>{{bijaks?.ms}}</b></td>
+    </tr>
+    <tr>
+        <td colspan="2">At:&nbsp;{{bijaks?.city}}</td>
+        <td colspan="3">Truck No.:&nbsp;{{bijaks?.truckNo}}</td>
+        <td colspan="2">Dispatch Date:&nbsp;{{bijaks?.dispatchDate}}</td>
+
+    </tr>
+    <tr><td colspan="7" style="text-align:center">We thank you for the consignment,sale proceeds in as under.</td></tr>
+    <tr>
+        <th>Sno.</th>
+        <th>Description</th>
+        <th>Ctn/Kg</th>
+        <th>Rate</th>
+        <th>Amount</th>
+        <th>Expenses</th>
+        <th>Amount</th>
+    </tr>
+    <tr *ngFor="let item of items">
+        <td>{{item?.sno}}</td>
+        <td>{{item?.description}}</td>
+        <td>{{item?.ctnKg}}</td>
+        <td>{{item?.rate}}</td>
+        <td>{{item?.itemAmount}}</td>
+        <td>Commission</td>
+        <td>18.48</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Truck Freight</td>
+        <td>{{bijaks?.truckFreight}}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Rail Freight</td>
+        <td>{{bijaks?.railFreight}}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Station and Mandi Exp</td>
+        <td>{{bijaks?.stationMandiExp}}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Unloading</td>
+        <td>{{bijaks?.unloading}}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Postage & Tale</td>
+        <td>{{bijaks?.postage}}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Phone</td>
+        <td>{{bijaks?.phone}}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Cold Storage</td>
+        <td>{{bijaks?.coldStorage}}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Loading</td>
+        <td>{{bijaks?.loading}}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Charity</td>
+        <td>{{bijaks?.charity}}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="4">Total Gross Sale</td>
+        <td>264</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="4">Less: Expenses</td>
+        <td>39.48</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="2">Total Nags:&nbsp;&nbsp;11</td>
+        <td colspan="2">Net Sale</td>
+        <td>224.52</td>
+        <td>Total Expenses</td>
+        <td>39.48</td>
+    </tr>
+    <tr>
+        <td colspan="2">Net Sale(in words) Rupees</td>
+        <td colspan="5">two hundred  and twenty five  Rupees Only</td>
+    </tr>
+    <tr>
+        <td colspan="7">Credited in Your Account. Kindly Send Quality Goods for
+            Best Returns of Profit.</td>
+    </tr>
+    <tr>
+        <td colspan="7">NB Expenses will be charged according to our shop rules.Not 
+            responsible for</td>
+    </tr>
+    <tr>
+        <td colspan="7">Goods Damaged or Less Weight.All Disputes Subject to 
+            Muzaffarpur Jurisdiction.</td>
+    </tr>
+    <tr>
+        <td colspan="5">Market Closed in Month Last Day,send soon O.R.R</td>
+        <td colspan="2">For Jagdamba Fruit Company</td>
+    </tr>
+</table> -->
+
+<div class="container-fluid bijak_table table-responsive">
+    <div class="" style="font-size: 14px;">
+        <div class="row bijak_image bottom_border">
+            <img class="img-fluid" src="assets/images/jagdamba.jpg" alt=""/>
+        </div>
+        <div class="row bottom_border">
+            <div class="col-4 pad">No. &nbsp;&nbsp;{{bijaks?.no}}</div>
+            <div class="col-8 pad">Date of Receipt:&nbsp;&nbsp;{{bijaks?.dataOfReciept}}</div>
+        </div>
+        <div class="row bottom_border">
+            <p class="pad">M/s:&nbsp;&nbsp;<b>{{bijaks?.ms}}</b></p>
+        </div>
+        <div class="row bottom_border">
+            <div class="col-4 pad">At:&nbsp;{{bijaks?.city}}</div>
+            <div class="col-4 pad">Truck No.:&nbsp;{{bijaks?.truckNo}}</div>
+            <div class="col-4 pad">Dispatch Date:&nbsp;{{bijaks?.dispatchDate}}</div>
+        </div>
+        <div class="row bottom_border">
+            <div class="col-12 center pad">We thank you for the consignment,sale proceeds in as under.</div>
+        </div>
+        <div class="row bottom_border">
+            <div class="col-7">
+                <div class="row bottom_border">
+                    <div class="col-1 pad">Sno.</div>
+                    <div class="col-4 pad">Description</div>
+                    <div class="col-2 pad">Ctn/Kg</div>
+                    <div class="col-2 pad">Rate</div>
+                    <div class="col-3 pad" style="border-right: 1px solid">Amount</div>
+                </div>
+                <div class="row bottom_border" *ngFor="let item of items">
+                    <div class="col-1 pad">{{item?.sno}}</div>
+                    <div class="col-4 pad">{{item?.description}}</div>
+                    <div class="col-2 pad">{{item?.ctnKg}}</div>
+                    <div class="col-2 pad">{{item?.rate}}</div>
+                    <div class="col-3 pad" style="border-right: 1px solid">{{item?.itemAmount}}</div>
+                </div>
+                <div class="row bottom_border" *ngIf="blank">
+                    <div class="col-1 pad">&nbsp;</div>
+                    <div class="col-4 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-3 pad" style="border-right: 1px solid">&nbsp;</div>
+                </div>
+                <div class="row bottom_border" *ngIf="blank">
+                    <div class="col-1 pad">&nbsp;</div>
+                    <div class="col-4 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-3 pad" style="border-right: 1px solid">&nbsp;</div>
+                </div>
+                <div class="row bottom_border" *ngIf="blank">
+                    <div class="col-1 pad">&nbsp;</div>
+                    <div class="col-4 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-3 pad" style="border-right: 1px solid">&nbsp;</div>
+                </div>
+                <div class="row bottom_border" *ngIf="blank">
+                    <div class="col-1 pad">&nbsp;</div>
+                    <div class="col-4 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-3 pad" style="border-right: 1px solid">&nbsp;</div>
+                </div>
+                <div class="row bottom_border" *ngIf="blank">
+                    <div class="col-1 pad">&nbsp;</div>
+                    <div class="col-4 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-3 pad" style="border-right: 1px solid">&nbsp;</div>
+                </div>
+                <div class="row bottom_border" *ngIf="blank">
+                    <div class="col-1 pad">&nbsp;</div>
+                    <div class="col-4 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-3 pad" style="border-right: 1px solid">&nbsp;</div>
+                </div>
+                <div class="row bottom_border" *ngIf="blank">
+                    <div class="col-1 pad">&nbsp;</div>
+                    <div class="col-4 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-3 pad" style="border-right: 1px solid">&nbsp;</div>
+                </div>
+                <div class="row bottom_border" *ngIf="blank">
+                    <div class="col-1 pad">&nbsp;</div>
+                    <div class="col-4 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-3 pad" style="border-right: 1px solid">&nbsp;</div>
+                </div>
+                <div class="row bottom_border" *ngIf="blank">
+                    <div class="col-1 pad">&nbsp;</div>
+                    <div class="col-4 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-3 pad" style="border-right: 1px solid">&nbsp;</div>
+                </div>
+                <div class="row bottom_border" *ngIf="blank">
+                    <div class="col-1 pad">&nbsp;</div>
+                    <div class="col-4 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-2 pad">&nbsp;</div>
+                    <div class="col-3 pad" style="border-right: 1px solid">&nbsp;</div>
+                </div>
+                
+            </div>
+            <div class="col-5">
+                <div class="row bottom_border">
+                    <div class="pad col-7">Expenses</div>
+                    <div class="pad col-5">Amount</div>
+                </div>
+                <div class="row bottom_border">
+                    <div class="pad col-7">Commission</div>
+                    <div class="pad col-5">{{bijaks?.commission}}</div>
+                </div>
+                <div class="row bottom_border">
+                    <div class="pad col-7">Truck Freight</div>
+                    <div class="pad col-5">{{bijaks?.truckFreight}}</div>
+                </div>
+                <div class="row bottom_border">
+                    <div class="pad col-7">Rail Freight</div>
+                    <div class="pad col-5">{{bijaks?.railFreight}}</div>
+                </div>
+                <div class="row bottom_border">
+                    <div class="pad col-7">Station/Mandi Exp</div>
+                    <div class="pad col-5">{{bijaks?.stationMandiExp}}</div>
+                </div>
+                <div class="row bottom_border">
+                    <div class="pad col-7">Unloading</div>
+                    <div class="pad col-5">{{bijaks?.unloading}}</div>
+                </div>
+                <div class="row bottom_border">
+                    <div class="pad col-7">Postage/Tale</div>
+                    <div class="pad col-5">{{bijaks?.postage}}</div>
+                </div>
+                <div class="row bottom_border">
+                    <div class="pad col-7">Phone</div>
+                    <div class="pad col-5">{{bijaks?.phone}}</div>
+                </div>
+                <div class="row bottom_border">
+                    <div class="pad col-7">Cold Storage</div>
+                    <div class="pad col-5">{{bijaks?.coldStorage}}</div>
+                </div>
+                <div class="row bottom_border">
+                    <div class="pad col-7">Loading</div>
+                    <div class="pad col-5">{{bijaks?.loading}}</div>
+                </div>
+                <div class="row bottom_border">
+                    <div class="pad col-7">Charity</div>
+                    <div class="pad col-5">{{bijaks?.charity}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="row bottom_border pad">&nbsp;</div>
+        <div class="row bottom_border pad">&nbsp;</div>
+        <div class="row bottom_border pad">&nbsp;</div>
+        <div class="row bottom_border">
+            <div class="col-5 pad" style="text-align: right;">Total Gross Sale	</div>
+            <div class="col-2 pad">{{bijaks?.totalGrossSale}}</div>
+            <div class="col-5 pad"></div>
+        </div>
+        <div class="row bottom_border">
+            <div class="col-5 pad" style="text-align: right;">Less:Expenses	</div>
+            <div class="col-2 pad">{{bijaks?.totalExpenses}}</div>
+            <div class="col-5 pad"></div>
+        </div>
+        <div class="row bottom_border">
+            <div class="col-3 pad">Total Nags: &nbsp; {{bijaks?.totalNags}}	</div>
+            <div class="col-2 pad">Net Sale</div>
+            <div class="col-2 pad">{{bijaks?.netSale}}</div>
+            <div class="col-3 pad">Total Expenses</div>
+            <div class="col-2 pad">{{bijaks?.totalExpenses}}</div>
+        </div>
+        <div class="row bottom_border">
+            <div class="col-4 pad">Net Sale(in words) Rupees</div>
+            <div class="col-8 pad"></div>
+        </div>
+        <div class="row bottom_border">
+            <div class="col-12 left-align pad">Credited in Your Account. Kindly Send Quality Goods for Best Returns of Profit.
+            </div>
+        </div>
+        <div class="row bottom_border">
+            <div class="col-12 left-align pad">NB Expenses will be charged according to our shop rules.Not responsible for
+            </div>
+        </div>
+        <div class="row bottom_border">
+            <div class="col-12 left-align pad">Goods Damaged or Less Weight.All Disputes Subject to Muzaffarpur Jurisdiction.
+            </div>
+        </div>
+        <div class="row bottom_border">
+            <div class="col-8 pad">Goods Damaged or Less Weight.All Disputes Subject to Muzaffarpur Jurisdiction.
+            </div>
+            <div class="col-4 pad">For Jagdamba Fruit Company</div>
+        </div>
+    </div>
+</div>

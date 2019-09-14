@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="row filters">
+        <div class="col-md-4">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">Category</button>
+                <div class="dropdown-menu pad-15" aria-labelledby="triggerId">
+                    <div class="form-check" *ngFor="let cat of category; let i=index">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="{{i}}" 
+                            (change)="addFilter('category',cat.name,  $event.target.checked)">{{cat.name}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">Brand</button>
+                <div class="dropdown-menu pad-15" aria-labelledby="triggerId">
+                    <div class="form-check" *ngFor="let brand of brand; let i=index">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" value="{{i}}"
+                            (change)="addFilter('brand', brand.name, $event.target.checked)">{{brand.name}}
+                        </label>
+                    </div>
+                </div>
+            </div>          
+        </div>
+        <div class="col-md-4">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">Sort</button>
+                <div class="dropdown-menu pad-15" aria-labelledby="triggerId">
+                    <div class="radio">
+                        <label><input type="radio" (change)="getPaginatedProd(1)" name="optradio" checked>A-Z</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" (change)="getPaginatedProd(-1)" name="optradio">Z-A</label>
+                    </div>
+                </div>
+            </div>          
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 item" *ngFor="let prod of product">
+            <div class="card">
+                <img class="card-img-top" src="{{prod.product_image}}" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">{{prod.name}}</h4>
+                    <p class="card-text"><b class="clearfix"><span class="float-left">{{prod.brand.name}}</span>  <span class="float-right">{{prod.category.name}}</span></b></p>
+                    <p class="card-text">{{prod.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="row">
+        <!-- <ul class="pagination">
+            <li class="page-item"><a class="page-link">Previous</a></li>
+            <li class="page-item"><a class="page-link" (click)="getPaginatedProd(asc)">1</a></li>
+            <li class="page-item"><a class="page-link" (click)="getPaginatedProd(2, asc)">2</a></li>
+            <li class="page-item"><a class="page-link" (click)="getPaginatedProd(3, asc)">3</a></li>
+            <li class="page-item"><a class="page-link">Next</a></li>
+        </ul> -->
+    </div>
+</div>
